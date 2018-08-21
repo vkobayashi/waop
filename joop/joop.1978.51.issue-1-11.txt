@@ -1,0 +1,1 @@
+This paper outlines a computer-aided career and vocational guidance system, developed at Kelsterton College, which claims to have three virtues of being inexpensive, simple to use, and easy to maintain. The present job file contains information on 140 jobs, but work on expanding this file is proceeding with a grant from the Job Creation Programme.
