@@ -1,3 +1,0 @@
-Increasingly pervasive in modern industrial settings, robots pose a remarkable challenge to those concerned with the psychological and social implications of new technologies. This paper assesses the psychological and occupational problems typical to robotization, and reviews the suitability of conventional intervention techniques for robot-related problems.
-…the machine is conducting our future for us not only simply in direct answer to our direct questions, but in general answer to the world situation and to human psychology as a whole… The machine cannot, must not, make us unhappy.
-(Asimov, 1950)
