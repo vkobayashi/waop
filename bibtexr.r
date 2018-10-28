@@ -136,7 +136,7 @@ sapply(joop_TM, function(x)
 
 Topic <- topics(joop_TM[["VEM"]], 1)
 
-Terms <- terms(joop_TM[["VEM"]], 5)
+Terms <- terms(joop_TM[["Gibbs"]], 10)
 Terms[,1:10]
 
 which(Topic==19)
