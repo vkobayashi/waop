@@ -1,26 +1,11 @@
-library(RefManageR)
+#library(RefManageR)
 library(readr)
 library(tm)
 library(stringr)
 library(slam)
+library(topicmodels)
 
-#setwd("C:/Users/alluring/Downloads")
-
-# bib = ReadBib(file="My EndNote Library Employability Deduplicated BibTeX ABS 9933.bib",
-#               check=FALSE)
-# d.bibEQL  = as.data.frame(bib)
-# 
-bib=read_lines("My EndNote Library Employability Deduplicated BibTeX ABS 9933.bib")
-bib_abstracts=bib[grepl("Abstract = ", bib)]
-bib_title = bib[grepl("title = ", bib)]
-bib_publisher = bib[grepl("publisher = ", bib)]
-bib_type = bib[grepl("type = ", bib)]
-bib_journal = bib[grepl("journal = ", bib)]
-
-
-
-#d.bibEQL  = as.data.frame(bib)
-
+load("topics_employability.rda")
 
 ###################
 ### Topic Modeling
@@ -134,9 +119,9 @@ sapply(joop_TM, function(x)
   mean(apply(posterior(x)$topics,
              1, function(z) - sum(z * log(z)))))
 
-Topic <- topics(joop_TM[["VEM"]], 1)
+Topic <- topics(joop_TM[["CTM"]], 1)
 
-Terms <- terms(joop_TM[["Gibbs"]], 10)
+Terms <- terms(joop_TM[["CTM"]], 10)
 Terms[,1:10]
 
 which(Topic==19)
