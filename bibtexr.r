@@ -185,6 +185,8 @@ employa_topicCTM =CTM(dtm, k = k,
                       control = list(seed = SEED,
                                      var = list(tol = 10^-4), em = list(tol = 10^-3)))
 
+save(employa_topicCTM, file="I:\\CJKR\\DATA\\employability_topicmodelsCTM.rda")
+
 sapply(joop_TM[1:2], slot, "alpha")
 
 sapply(joop_TM, function(x)
