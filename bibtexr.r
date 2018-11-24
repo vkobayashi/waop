@@ -185,7 +185,8 @@ employa_topicCTM =CTM(dtm, k = k,
                       control = list(seed = SEED,
                                      var = list(tol = 10^-4), em = list(tol = 10^-3)))
 
-save(employa_topicCTM, file="I:\\CJKR\\DATA\\employability_topicmodelsCTM.rda")
+#save(employa_topicCTM, file="I:\\CJKR\\DATA\\employability_topicmodelsCTM.rda")
+load("employability_topicmodelsCTM.rda")
 
 sapply(joop_TM[1:2], slot, "alpha")
 
@@ -193,10 +194,10 @@ sapply(joop_TM, function(x)
   mean(apply(posterior(x)$topics,
              1, function(z) - sum(z * log(z)))))
 
-Topic <- topics(joop_TM[["VEM"]], 1)
+Topic <- topics(employa_topicCTM[["VEM"]], 1)
 
-Terms <- terms(joop_TM[["Gibbs"]], 10)
-Terms[,1:10]
+Terms <- terms(employa_topicCTM, 10)
+Terms[,1:20]
 
 which(Topic==19)
 
