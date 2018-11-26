@@ -110,7 +110,7 @@ Topic <- topics(employa_topicCTM, 1)
 Terms <- terms(employa_topicCTM, 10)
 Terms[,1:20]
 
-which(Topic==19)
+which(Topic==1)
 
 class(dtm)
 
@@ -175,8 +175,9 @@ jsSammon<-function (phi)
 }
 
 ### Choose 5000 job titles
-indx <- sample(1:nrow(employa_theta),5000)
+#indx <- sample(1:nrow(employa_theta),5000)
 employa_theta_sub <- employa_theta[indx,] 
+employa_theta_sub <- employa_theta 
 
 ### Compute distances
 dist_employa <- proxy::dist(x=employa_theta_sub, method=jensenShannon, convert_similarities = FALSE)
